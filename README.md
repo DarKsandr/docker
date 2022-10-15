@@ -4,6 +4,6 @@
 
 ## Установлено
     - nginx
-    - php:8.1-fpm + extension + nodejs
+    - php:8.1-fpm + extension + composer + nodejs
     - mysql
     - phpMyAdmin
