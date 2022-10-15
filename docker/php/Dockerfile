@@ -23,9 +23,8 @@ RUN set -eux; \
     apt-get update; \
     apt-get upgrade -y; \
     apt-get install -y --no-install-recommends \
-            nodejs \
-            npm \
             curl \
+            npm \
             zip \
             unzip \
             git \
@@ -41,6 +40,10 @@ RUN set -eux; \
             libmcrypt-dev \
             libonig-dev; \
     rm -rf /var/lib/apt/lists/*
+
+#Install nodejs
+RUN curl -s https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs 
 
 RUN set -eux; \
     # Install the PHP pdo_mysql extention
