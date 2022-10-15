@@ -41,7 +41,7 @@ RUN set -eux; \
             libonig-dev; \
     rm -rf /var/lib/apt/lists/*
 
-#Install nodejs
+# Install nodejs
 RUN curl -s https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs 
 
