@@ -26,6 +26,9 @@ RUN set -eux; \
             nodejs \
             npm \
             curl \
+            zip \
+            unzip \
+            git \
             libmemcached-dev \
             libz-dev \
             libpq-dev \
@@ -53,3 +56,6 @@ RUN set -eux; \
             --with-freetype; \
     docker-php-ext-install gd; \
     php -r 'var_dump(gd_info());'
+
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
